@@ -233,24 +233,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Kt-DA-c54">
-                                <rect key="frame" x="27" y="101" width="158" height="158"/>
-                                <viewLayoutGuide key="safeArea" id="7SI-Jo-SlN"/>
-                                <color key="backgroundColor" systemColor="systemGray5Color"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="158" id="5G1-WV-EFy"/>
-                                    <constraint firstAttribute="width" constant="158" id="qim-1L-4nK"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OrH-gI-ywA">
-                                <rect key="frame" x="208" y="101" width="158" height="158"/>
-                                <viewLayoutGuide key="safeArea" id="8i1-Gz-bup"/>
-                                <color key="backgroundColor" systemColor="systemGray5Color"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="158" id="fSg-VX-XuY"/>
-                                    <constraint firstAttribute="width" constant="158" id="uq4-ql-MO0"/>
-                                </constraints>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="О создателях" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ud-l1-1T4">
                                 <rect key="frame" x="34" y="40" width="146" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
@@ -297,33 +279,53 @@
                                     <constraint firstAttribute="width" constant="240" id="wdN-b2-17g"/>
                                 </constraints>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oleg1" translatesAutoresizingMaskIntoConstraints="NO" id="QlY-CQ-Gzd">
+                                <rect key="frame" x="27" y="101" width="158" height="158"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="158" id="tL9-Qz-OO6"/>
+                                    <constraint firstAttribute="width" constant="158" id="wUm-CC-UzR"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oleg2" translatesAutoresizingMaskIntoConstraints="NO" id="Lyp-GO-WaW">
+                                <rect key="frame" x="208" y="101" width="158" height="158"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="8vv-ck-pkt"/>
+                                    <constraint firstAttribute="height" constant="158" id="Rlu-L1-PKa"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SGd-nP-9iy"/>
                         <color key="backgroundColor" name="MyBackground"/>
                         <constraints>
-                            <constraint firstItem="Fre-IC-Opa" firstAttribute="top" secondItem="OrH-gI-ywA" secondAttribute="bottom" id="37y-8W-Zyp"/>
-                            <constraint firstItem="Zrb-dF-EsS" firstAttribute="top" secondItem="8Kt-DA-c54" secondAttribute="bottom" id="7JU-db-OeH"/>
                             <constraint firstItem="3zk-WA-ZCY" firstAttribute="top" secondItem="vZg-Nq-RGs" secondAttribute="bottom" constant="52" id="95c-2N-7iY"/>
-                            <constraint firstItem="Fre-IC-Opa" firstAttribute="leading" secondItem="OrH-gI-ywA" secondAttribute="leading" id="9b1-4q-YhC"/>
-                            <constraint firstItem="Zrb-dF-EsS" firstAttribute="trailing" secondItem="8Kt-DA-c54" secondAttribute="trailing" id="BGc-mK-NjM"/>
+                            <constraint firstItem="Fre-IC-Opa" firstAttribute="leading" secondItem="Lyp-GO-WaW" secondAttribute="leading" id="9HZ-Hm-HXh"/>
+                            <constraint firstItem="QlY-CQ-Gzd" firstAttribute="top" secondItem="4ud-l1-1T4" secondAttribute="bottom" constant="34" id="9nJ-Ml-6LQ"/>
                             <constraint firstItem="vZg-Nq-RGs" firstAttribute="leading" secondItem="SGd-nP-9iy" secondAttribute="leading" constant="16" id="Cfn-oo-ryj"/>
                             <constraint firstItem="vZg-Nq-RGs" firstAttribute="top" secondItem="Fre-IC-Opa" secondAttribute="bottom" constant="32" id="DdP-V9-tLC"/>
-                            <constraint firstItem="OrH-gI-ywA" firstAttribute="top" secondItem="4ud-l1-1T4" secondAttribute="bottom" constant="34" id="HXd-Bq-mp4"/>
-                            <constraint firstItem="SGd-nP-9iy" firstAttribute="trailing" secondItem="OrH-gI-ywA" secondAttribute="trailing" constant="27" id="JMH-sT-lXg"/>
-                            <constraint firstItem="Zrb-dF-EsS" firstAttribute="leading" secondItem="8Kt-DA-c54" secondAttribute="leading" id="KK5-bU-lH2"/>
-                            <constraint firstItem="8Kt-DA-c54" firstAttribute="top" secondItem="4ud-l1-1T4" secondAttribute="bottom" constant="34" id="OON-GG-2os"/>
-                            <constraint firstItem="Fre-IC-Opa" firstAttribute="trailing" secondItem="OrH-gI-ywA" secondAttribute="trailing" id="T6G-lf-dvc"/>
+                            <constraint firstItem="QlY-CQ-Gzd" firstAttribute="leading" secondItem="SGd-nP-9iy" secondAttribute="leading" constant="27" id="JhR-ki-Okr"/>
+                            <constraint firstItem="Lyp-GO-WaW" firstAttribute="top" secondItem="4ud-l1-1T4" secondAttribute="bottom" constant="34" id="Mf8-K2-oIh"/>
                             <constraint firstItem="4ud-l1-1T4" firstAttribute="leading" secondItem="SGd-nP-9iy" secondAttribute="leading" constant="34" id="U1X-n6-Df8"/>
+                            <constraint firstItem="Zrb-dF-EsS" firstAttribute="leading" secondItem="QlY-CQ-Gzd" secondAttribute="leading" id="a7C-f6-QRr"/>
+                            <constraint firstItem="Fre-IC-Opa" firstAttribute="leading" secondItem="Lyp-GO-WaW" secondAttribute="leading" id="d4m-2B-WTl"/>
                             <constraint firstItem="743-Oq-X0t" firstAttribute="centerX" secondItem="94h-So-VsS" secondAttribute="centerX" id="fA1-gB-SC7"/>
                             <constraint firstItem="4ud-l1-1T4" firstAttribute="top" secondItem="SGd-nP-9iy" secondAttribute="top" constant="40" id="ftg-Gs-u9C"/>
+                            <constraint firstItem="Zrb-dF-EsS" firstAttribute="top" secondItem="QlY-CQ-Gzd" secondAttribute="bottom" id="g4S-pd-dEW"/>
                             <constraint firstItem="SGd-nP-9iy" firstAttribute="trailing" secondItem="vZg-Nq-RGs" secondAttribute="trailing" constant="16" id="i1V-MI-s1D"/>
+                            <constraint firstItem="Fre-IC-Opa" firstAttribute="width" secondItem="Lyp-GO-WaW" secondAttribute="width" id="jP1-bf-Jwa"/>
                             <constraint firstItem="SGd-nP-9iy" firstAttribute="bottom" secondItem="743-Oq-X0t" secondAttribute="bottom" constant="39" id="p7w-hK-OCl"/>
-                            <constraint firstItem="8Kt-DA-c54" firstAttribute="leading" secondItem="SGd-nP-9iy" secondAttribute="leading" constant="27" id="pDk-JM-85i"/>
+                            <constraint firstItem="Fre-IC-Opa" firstAttribute="leading" secondItem="Lyp-GO-WaW" secondAttribute="leading" id="tic-Jh-9p3"/>
+                            <constraint firstItem="Zrb-dF-EsS" firstAttribute="width" secondItem="QlY-CQ-Gzd" secondAttribute="width" id="usa-2B-ZkT"/>
+                            <constraint firstItem="Fre-IC-Opa" firstAttribute="top" secondItem="Lyp-GO-WaW" secondAttribute="bottom" id="wP6-z6-Yoz"/>
+                            <constraint firstItem="SGd-nP-9iy" firstAttribute="trailing" secondItem="Lyp-GO-WaW" secondAttribute="trailing" constant="27" id="wsh-PF-Kd0"/>
                             <constraint firstItem="3zk-WA-ZCY" firstAttribute="leading" secondItem="SGd-nP-9iy" secondAttribute="leading" constant="16" id="xxr-ZO-Pxr"/>
                             <constraint firstAttribute="trailing" secondItem="3zk-WA-ZCY" secondAttribute="trailing" constant="16" id="zTw-TC-JYc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="E59-wy-iYH"/>
+                    <connections>
+                        <outlet property="imageView1" destination="QlY-CQ-Gzd" id="CAA-U0-L4k"/>
+                        <outlet property="imageView2" destination="Lyp-GO-WaW" id="zNp-d8-2Qt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilH-kL-egm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -332,6 +334,8 @@
     </scenes>
     <resources>
         <image name="HeartIcon" width="122.87999725341797" height="107.38999938964844"/>
+        <image name="Oleg1" width="450" height="760"/>
+        <image name="Oleg2" width="86" height="128"/>
         <image name="person" catalog="system" width="128" height="121"/>
         <image name="photo.stack.fill" catalog="system" width="126" height="128"/>
         <image name="restart" catalog="system" width="117" height="128"/>
@@ -346,9 +350,6 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
