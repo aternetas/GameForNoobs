@@ -14,11 +14,15 @@ class NoobGameController: UIViewController {
     @IBOutlet weak var restartButton: UIButton!
     @IBOutlet weak var yesButton: UIButton!
     @IBOutlet weak var noButton: UIButton!
+    @IBOutlet weak var progressBar: UIProgressView!
     
     let gameService: GameService = GameService()
     var currentCard: GameCardModel?
     var currentQuestion: CardType?
     var cards: [GameCardModel] = []
+    var currentProgress: Float = 0.0
+    lazy var winningImage: UIImageView = UIImageView()
+    var progressBarWinningCount: Float = 5
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,10 +70,19 @@ class NoobGameController: UIViewController {
     
     func gameResult(isWin: Bool) {
         gameLabel.text = isWin ? "Верно" : "Неверно"
+        
+        currentProgress = isWin ? currentProgress + 1/progressBarWinningCount :
+            currentProgress - 1/progressBarWinningCount
+        currentProgress = currentProgress < 0 ? 0 : currentProgress
+        progressBar.setProgress(currentProgress, animated: true)
+        
         restartButton.isHidden = false
         yesButton.isEnabled = false
         noButton.isEnabled = false
         
+        if currentProgress == 1.0 {
+            setWinningImage()
+        }
     }
     
     @IBAction func onClickRestartButton(_ sender: Any) {
@@ -80,8 +93,17 @@ class NoobGameController: UIViewController {
     }
     
     func initUI() {
+        progressBar.progress = currentProgress
         restartButton.layer.cornerRadius = 22
         restartButton.layer.borderWidth = 0.5
         restartButton.layer.borderColor = UIColor.systemPurple.cgColor
+    }
+    
+    func setWinningImage() {
+        winningImage.contentMode = .scaleAspectFit
+        winningImage.frame.size = .init(width: 400, height: 400)
+        winningImage.center = view.center
+        winningImage.image = UIImage(named: "Win")
+        view.addSubview(winningImage)
     }
 }

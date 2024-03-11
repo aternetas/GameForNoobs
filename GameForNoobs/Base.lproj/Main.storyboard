@@ -96,6 +96,12 @@
                                     <segue destination="kvt-Hs-2JB" kind="show" id="QuS-h6-A8b"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Lv3-Qo-bAA">
+                                <rect key="frame" x="71.666666666666686" y="537" width="250" height="4"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="HqR-qR-Pk9"/>
+                                </constraints>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="MyBackground"/>
@@ -108,18 +114,22 @@
                             <constraint firstItem="peC-Rd-rXg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H3f-tt-fNW"/>
                             <constraint firstItem="uov-dZ-MEc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="Iiz-8f-EJr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qhJ-V0-vae" secondAttribute="bottom" constant="20" id="ImM-pT-LBS"/>
+                            <constraint firstItem="Lv3-Qo-bAA" firstAttribute="leading" secondItem="vlk-dG-Kav" secondAttribute="leading" id="Vfv-BX-uAw"/>
                             <constraint firstItem="ufb-GC-QCL" firstAttribute="centerX" secondItem="uov-dZ-MEc" secondAttribute="centerX" id="aEO-q0-zXl"/>
                             <constraint firstItem="qhJ-V0-vae" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cGG-0D-c57"/>
+                            <constraint firstItem="Lv3-Qo-bAA" firstAttribute="top" secondItem="ufb-GC-QCL" secondAttribute="bottom" constant="19" id="eOT-RI-hTc"/>
                             <constraint firstItem="Jqk-5f-EW1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="fxa-UE-dug"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="peC-Rd-rXg" secondAttribute="bottom" constant="100" id="iM2-DS-ldi"/>
                             <constraint firstItem="vlk-dG-Kav" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m2p-xV-ePu"/>
                             <constraint firstItem="ufb-GC-QCL" firstAttribute="top" secondItem="uov-dZ-MEc" secondAttribute="bottom" constant="36" id="rIw-x3-2dx"/>
+                            <constraint firstItem="Lv3-Qo-bAA" firstAttribute="width" secondItem="vlk-dG-Kav" secondAttribute="width" id="tBl-26-GUF"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="gameImageView" destination="Jqk-5f-EW1" id="wcf-u4-W1N"/>
                         <outlet property="gameLabel" destination="uov-dZ-MEc" id="zaY-WP-4fc"/>
                         <outlet property="noButton" destination="peC-Rd-rXg" id="YyH-Gf-Ctf"/>
+                        <outlet property="progressBar" destination="Lv3-Qo-bAA" id="JZY-LT-wJ1"/>
                         <outlet property="restartButton" destination="ufb-GC-QCL" id="8bM-Hg-pWI"/>
                         <outlet property="yesButton" destination="vlk-dG-Kav" id="nsd-fl-b7h"/>
                     </connections>
