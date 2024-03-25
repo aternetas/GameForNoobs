@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A516B2982B95350D00F2E1C2 /* GameCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A516B2972B95350D00F2E1C2 /* GameCardModel.swift */; };
 		A516B29A2B9537D000F2E1C2 /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A516B2992B9537D000F2E1C2 /* GameService.swift */; };
+		A565ABD22BB1F95F00496201 /* DonationCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A565ABD12BB1F95F00496201 /* DonationCardModel.swift */; };
+		A565ABD42BB1F98C00496201 /* DonationCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A565ABD32BB1F98C00496201 /* DonationCardCell.swift */; };
 		A56BC8772B97D78900E8B61C /* GalleryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56BC8762B97D78900E8B61C /* GalleryController.swift */; };
 		A5B1F7032B9639C000B65C01 /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B1F7022B9639C000B65C01 /* AboutController.swift */; };
 		A5B3C2552B9930590002D895 /* GameCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B3C2542B9930590002D895 /* GameCardCell.swift */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		A516B2972B95350D00F2E1C2 /* GameCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCardModel.swift; sourceTree = "<group>"; };
 		A516B2992B9537D000F2E1C2 /* GameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
+		A565ABD12BB1F95F00496201 /* DonationCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DonationCardModel.swift; path = ../DonationCardModel.swift; sourceTree = "<group>"; };
+		A565ABD32BB1F98C00496201 /* DonationCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationCardCell.swift; sourceTree = "<group>"; };
 		A56BC8762B97D78900E8B61C /* GalleryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryController.swift; sourceTree = "<group>"; };
 		A5B1F7022B9639C000B65C01 /* AboutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = "<group>"; };
 		A5B3C2542B9930590002D895 /* GameCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCardCell.swift; sourceTree = "<group>"; };
@@ -50,6 +54,7 @@
 		A5DB2DEA2B94F99900DD080D = {
 			isa = PBXGroup;
 			children = (
+				A565ABD32BB1F98C00496201 /* DonationCardCell.swift */,
 				A5DB2DF52B94F99900DD080D /* GameForNoobs */,
 				A5DB2DF42B94F99900DD080D /* Products */,
 			);
@@ -78,6 +83,7 @@
 				A5B1F7022B9639C000B65C01 /* AboutController.swift */,
 				A56BC8762B97D78900E8B61C /* GalleryController.swift */,
 				A5B3C2542B9930590002D895 /* GameCardCell.swift */,
+				A565ABD12BB1F95F00496201 /* DonationCardModel.swift */,
 			);
 			path = GameForNoobs;
 			sourceTree = "<group>";
@@ -156,10 +162,12 @@
 				A5DB2DF72B94F99900DD080D /* AppDelegate.swift in Sources */,
 				A5B3C2552B9930590002D895 /* GameCardCell.swift in Sources */,
 				A56BC8772B97D78900E8B61C /* GalleryController.swift in Sources */,
+				A565ABD42BB1F98C00496201 /* DonationCardCell.swift in Sources */,
 				A5DB2DF92B94F99900DD080D /* SceneDelegate.swift in Sources */,
 				A516B29A2B9537D000F2E1C2 /* GameService.swift in Sources */,
 				A5DB2E0B2B94FDC300DD080D /* NoobGameController.swift in Sources */,
 				A516B2982B95350D00F2E1C2 /* GameCardModel.swift in Sources */,
+				A565ABD22BB1F95F00496201 /* DonationCardModel.swift in Sources */,
 				A5B1F7032B9639C000B65C01 /* AboutController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
