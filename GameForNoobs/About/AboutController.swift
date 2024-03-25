@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AboutController: UIViewController, UICollectionViewDataSource, UITableViewDelegate {
+class AboutController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var imageView1: UIImageView!
     @IBOutlet weak var imageView2: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -28,14 +28,19 @@ class AboutController: UIViewController, UICollectionViewDataSource, UITableView
         imageView2.layer.borderColor = UIColor(resource: .highlightButtonBackground).cgColor
     }
     
+    //MARK: -UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         donations.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DonationCardCell", for: indexPath) as! DonationCardCell
-        cell.label.text = donations[indexPath.item].donationName
-        cell.photoView.image = UIImage(named: donations[indexPath.item].type.rawValue.capitalized)
+        cell.bind(model: donations[indexPath.item])
         return cell
+    }
+    
+    //MARK: -UICollectionViewDelegateFlowLayout
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize(width: 128, height: 128)
     }
 }
