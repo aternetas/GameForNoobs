@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GalleryController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class GalleryController: UIViewController, UITableViewDataSource, UITableViewDelegate, GameCardDelegateProtocol {
     @IBOutlet weak var tableView: UITableView!
     let gameService = GameService()
     lazy var cards = gameService.getCards()
@@ -19,6 +19,11 @@ class GalleryController: UIViewController, UITableViewDataSource, UITableViewDel
         tableView.delegate = self
     }
     
+    //MARK: -GameCardDelegateProtocol
+    func clickCard(cardId: String) {
+        print(cardId)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         cards.count
     }
@@ -26,6 +31,7 @@ class GalleryController: UIViewController, UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GameCardCell", for: indexPath) as! GameCardCell
         cell.bind(model: cards[indexPath.item])
+        cell.delegate = self
         return cell
     }
     

@@ -8,6 +8,7 @@
 import Foundation
 
 struct GameCardModel {
+    let id = UUID().uuidString
     let cardName: String
     let type: CardType
 }
