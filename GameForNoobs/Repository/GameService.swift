@@ -22,4 +22,15 @@ class GameService {
             GameCardModel(cardName: "NotCat_4", type: .doll)
         ]
     }
+    
+    func getDonationsCards() -> [DonationCardModel] {
+        [
+            DonationCardModel(donationName: "вконтактик", type: .vk),
+            DonationCardModel(donationName: "дать деняк", type: .cash),
+            DonationCardModel(donationName: "спасти киви-банк", type: .kiwi),
+            DonationCardModel(donationName: "подписка", type: .twitch),
+            DonationCardModel(donationName: "патреон", type: .patreon),
+            DonationCardModel(donationName: "поцелуйчик", type: .kiss)
+        ]
+    }
 }
