@@ -27,7 +27,7 @@ class GameService {
         [
             DonationCardModel(donationName: "вконтактик", type: .vk),
             DonationCardModel(donationName: "дать деняк", type: .cash),
-            DonationCardModel(donationName: "спасти киви-банк", type: .kiwi),
+            DonationCardModel(donationName: "спасти киви-банк", type: .qiwi),
             DonationCardModel(donationName: "подписка", type: .twitch),
             DonationCardModel(donationName: "патреон", type: .patreon),
             DonationCardModel(donationName: "поцелуйчик", type: .kiss)
