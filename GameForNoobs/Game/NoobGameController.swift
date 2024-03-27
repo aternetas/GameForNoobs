@@ -28,8 +28,12 @@ class NoobGameController: UIViewController {
         super.viewDidLoad()
         
         initUI()
-        cards = gameService.getCards()
-        playGame()
+        gameService.getCardsAsync { models in
+            DispatchQueue.main.async {
+                self.cards.append(contentsOf: models)
+                self.playGame()
+            }
+        }
     }
     
     func playGame() {

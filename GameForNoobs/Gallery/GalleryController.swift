@@ -10,13 +10,20 @@ import UIKit
 class GalleryController: UIViewController, UITableViewDataSource, UITableViewDelegate, GameCardDelegateProtocol {
     @IBOutlet weak var tableView: UITableView!
     let gameService = GameService()
-    lazy var cards = gameService.getCards()
+    private var cards: [GameCardModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        gameService.getCardsAsync { models in
+            DispatchQueue.main.async {
+                self.cards = models
+                self.tableView.reloadData()
+            }
+        }
     }
     
     //MARK: -GameCardDelegateProtocol
