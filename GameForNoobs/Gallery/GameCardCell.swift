@@ -8,7 +8,8 @@
 import UIKit
 
 protocol GameCardDelegateProtocol {
-    func clickCard(cardId: String)
+    func clickOnCell(cardId: String)
+    func clickOnButton(cardId: String)
 }
 
 class GameCardCell: UITableViewCell {
@@ -23,7 +24,11 @@ class GameCardCell: UITableViewCell {
         label.text = model.type.rawValue
     }
     
-    @IBAction func clickButton(_ sender: UIButton) {
-        delegate?.clickCard(cardId: id)
+    @IBAction func clickOnButton(_ sender: UIButton) {
+        delegate?.clickOnButton(cardId: id)
+    }
+    
+    func clickOn() {
+        delegate?.clickOnCell(cardId: id)
     }
 }
