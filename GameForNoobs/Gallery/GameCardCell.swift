@@ -10,6 +10,7 @@ import UIKit
 protocol GameCardDelegateProtocol {
     func clickOnCell(cardId: String)
     func clickOnButton(cardId: String)
+    func trailingOnCell()
 }
 
 class GameCardCell: UITableViewCell {
@@ -30,5 +31,9 @@ class GameCardCell: UITableViewCell {
     
     func clickOn() {
         delegate?.clickOnCell(cardId: id)
+    }
+    
+    func trailingOn() {
+        delegate?.trailingOnCell()
     }
 }

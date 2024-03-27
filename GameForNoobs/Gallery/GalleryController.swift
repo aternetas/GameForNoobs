@@ -11,7 +11,7 @@ class GalleryController: UIViewController, UITableViewDataSource, UITableViewDel
     @IBOutlet weak var tableView: UITableView!
     let gameService = GameService()
     lazy var cards = gameService.getCards()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,6 +28,10 @@ class GalleryController: UIViewController, UITableViewDataSource, UITableViewDel
         print(cardId + "cell")
     }
     
+    func trailingOnCell() {
+        print("trailing")
+    }
+    
     //MARK: -UITableViewDelegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         120
@@ -35,6 +39,28 @@ class GalleryController: UIViewController, UITableViewDataSource, UITableViewDel
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         (tableView.cellForRow(at: indexPath) as! GameCardCell).clickOn()
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "🗑") { _, _, completionHandler in
+            print("delete action")
+            completionHandler(true)
+        }
+        
+        let editAction = UIContextualAction(style: .normal, title: "✏️") { _, _, completionHandler in
+            print("edit action")
+            completionHandler(true)            
+        }
+        
+        deleteAction.backgroundColor = UIColor.black
+        editAction.backgroundColor = UIColor.green
+        
+        let swipeConfiguration = UISwipeActionsConfiguration(actions: [deleteAction, editAction])
+        swipeConfiguration.performsFirstActionWithFullSwipe = false
+        
+        (tableView.cellForRow(at: indexPath) as! GameCardCell).trailingOn()
+        
+        return swipeConfiguration
     }
     
     //MARK: -UITableViewDataSource
