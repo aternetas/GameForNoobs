@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AboutController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class AboutController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var imageView1: UIImageView!
     @IBOutlet weak var imageView2: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -37,6 +37,15 @@ class AboutController: UIViewController, UICollectionViewDataSource, UICollectio
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DonationCardCell", for: indexPath) as! DonationCardCell
         cell.bind(model: donations[indexPath.item])
         return cell
+    }
+    
+    //MARK: -UICollectionViewDelegate
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if donations[indexPath.item].type == .vk {
+            print("error")
+        } else {
+            print(donations[indexPath.item].type.rawValue)
+        }
     }
     
     //MARK: -UICollectionViewDelegateFlowLayout

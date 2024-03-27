@@ -13,5 +13,5 @@ struct DonationCardModel {
 }
 
 enum DonationType: String, CaseIterable {
-    case vk = "vk", kiwi = "kiwi", cash = "cash", twitch = "twitch", patreon = "patreon", kiss = "kiss"
+    case vk = "vk", qiwi = "qiwi", cash = "cash", twitch = "twitch", patreon = "patreon", kiss = "kiss"
 }
