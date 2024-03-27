@@ -8,20 +8,7 @@
 import Foundation
 
 class GameService {
-    func getCards() -> [GameCardModel] {
-        [
-            GameCardModel(cardName: "Cat_1", type: .cat),
-            GameCardModel(cardName: "Cat_2", type: .cat),
-            GameCardModel(cardName: "Cat_3", type: .cat),
-            GameCardModel(cardName: "Cat_4", type: .cat),
-            GameCardModel(cardName: "Cat_5", type: .cat),
-            GameCardModel(cardName: "Cat_6", type: .cat),
-            GameCardModel(cardName: "NotCat_1", type: .dog),
-            GameCardModel(cardName: "NotCat_2", type: .dog),
-            GameCardModel(cardName: "NotCat_3", type: .bobr),
-            GameCardModel(cardName: "NotCat_4", type: .doll)
-        ]
-    }
+    var array: [GameCardModel] = []
     
     func getDonationsCards() -> [DonationCardModel] {
         [
@@ -32,5 +19,27 @@ class GameService {
             DonationCardModel(donationName: "патреон", type: .patreon),
             DonationCardModel(donationName: "поцелуйчик", type: .kiss)
         ]
+    }
+}
+
+//CompletionHandler
+extension GameService {
+    func getCardsAsync(completionHandler: @escaping ([GameCardModel]) -> ()) {
+        DispatchQueue.global().asyncAfter(deadline: .now() + 2, execute: {
+            completionHandler([
+                GameCardModel(cardName: "Cat_1", type: .cat),
+                GameCardModel(cardName: "Cat_2", type: .cat),
+                GameCardModel(cardName: "Cat_3", type: .cat),
+                GameCardModel(cardName: "Cat_4", type: .cat),
+                GameCardModel(cardName: "Cat_5", type: .cat),
+                GameCardModel(cardName: "Cat_6", type: .cat),
+                GameCardModel(cardName: "NotCat_1", type: .dog),
+                GameCardModel(cardName: "NotCat_2", type: .dog),
+                GameCardModel(cardName: "NotCat_3", type: .bobr),
+                GameCardModel(cardName: "NotCat_4", type: .doll)
+            ])
+            print("2 sec later")
+        })
+        print("empty array")
     }
 }
